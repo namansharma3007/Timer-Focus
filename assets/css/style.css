@@ -38,6 +38,8 @@ body {
   gap: 8px;
   font-size: 20px;
   font-weight: 600;
+  min-width: 200px; /* Set your desired min-width value */
+  margin: 0 5px;
 }
 
 input[type="number"] {
@@ -52,7 +54,7 @@ input[type="number"] {
   appearance: none;
   border-radius: 4px;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-
+  width: 100%;
 }
 
 input[type="number"]:focus {
@@ -134,11 +136,20 @@ input[type="number"]:focus {
     transform: scale(1);
   }
   100% {
-    transform: scale(1.5);
+    transform: scale(1.4);
   }
 }
 
 .audio-play {
   opacity: 0;
   position: absolute;
+}
+
+@media (max-width: 600px) {
+  .label {
+    width: 100%;
+  }
+  .time {
+    font-size: 80px;
+  }
 }
