@@ -43,7 +43,7 @@ function setTimer() {
 }
 
 var displayTime = document.getElementById("time-display");
-function displayAlert(){
+function displayAlert() {
   displayTime.innerHTML = `<div class="message-time-up" id="message-time-up">Time's Up!!</div>`;
 }
 function displayResume() {
@@ -89,3 +89,9 @@ function padZero(number) {
   return number < 10 ? "0" + number : number;
 }
 
+
+document.addEventListener('keypress', function (event) {
+  if (event.key === 'Enter') {
+    setTimer();
+  }
+});
