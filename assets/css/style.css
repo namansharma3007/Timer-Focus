@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(90deg, #FCC2C0 50%, #C4E7E2 50%);
+}
+
+.container {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.label {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+input[type="number"] {
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: 4px;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+}
+
+input[type="number"]:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgb(13 110 253 / 25%);
+}
+
+.btn-ctn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  color: white;
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 4px 8px;
+  min-height: 28px;
+  height: max-content;
+  transition: all 0.1s ease-in-out;
+}
+
+.btn-start {
+  background-color: rgb(84, 105, 212);
+}
+
+.btn-start:hover {
+  background-color: rgb(62, 81, 177);
+}
+
+.btn-reset {
+  background-color: rgb(212, 84, 84);
+}
+
+.btn-reset:hover {
+  background-color: rgb(186, 70, 70);
+}
+
+.clock {
+  display: flex;
+  gap: 5px;
+  height: 100px;
+}
+.time-display{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-size: 100px;
+  font-weight: 550;
+}
+
+.message-time-up {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: 700;
+  margin: 20px;
+  animation: alert 1.5s alternate ease-in-out infinite;
+}
+
+@keyframes alert {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+.audio-play {
+  opacity: 0;
+  position: absolute;
+}

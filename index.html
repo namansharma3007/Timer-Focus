@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="icon" href="./assets/images/Clock-icon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <section class="form">
+            <label for="hoursInp" class="label">
+                Hours
+                <input type="number" placeholder="Hours" id="hoursInp">
+            </label>
+            <label for="minutesInp" class="label">
+                Minutes
+                <input type="number" placeholder="Minutes" id="minutesInp">
+            </label>
+            <label for="secondsInp" class="label">
+                Seconds
+                <input type="number" placeholder="Seconds" id="secondsInp">
+            </label>
+
+
+        </section>
+
+        <section class="clock">
+            <div class="time-display" id="time-display">
+                <div class="time">
+                    <div class="time" id="hours">00</div>
+                    <span>:</span>
+                </div>
+                <div class="time">
+                    <div class="time" id="minutes">00</div>
+                    <span>:</span>
+                </div>
+                <div class="time">
+                    <div class="time" id="seconds">00</div>
+                </div>
+            </div>
+
+            <!-- <div class="message-time-up" id="message-time-up">Time's Up!!</div> -->
+
+        </section>
+
+        <div class="btn-ctn">
+            <button class="button btn-start" id="start" onclick="setTimer()" type="button">Start</button>
+            <button class="button btn-reset" id="reset" onclick="setReset()">Reset</button>
+        </div>
+
+        <audio controls class="audio-play" id="audio">
+            <source src="./assets/audio/wakey_wakey.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+
+        <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
