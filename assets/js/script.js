@@ -5,10 +5,14 @@ function playAlarm() {
     audio.play();
   });
 }
+
 let hoursInput, minutesInput, secondsInput;
 let intervalId;
 
 function setTimer() {
+  // Clear the existing interval if it exists
+  clearInterval(intervalId);
+
   hoursInput = document.getElementById("hoursInp");
   minutesInput = document.getElementById("minutesInp");
   secondsInput = document.getElementById("secondsInp");
@@ -71,13 +75,11 @@ function setZero() {
 function setReset() {
   clearInterval(intervalId);
   setZero();
-  audio.pause()
+  audio.pause();
   displayResume();
   audio.currentTime = 0;
   updateDisplay(0, 0, 0);
 }
-
-
 
 function updateDisplay(hours, minutes, seconds) {
   document.getElementById("hours").innerText = padZero(hours);
@@ -88,7 +90,6 @@ function updateDisplay(hours, minutes, seconds) {
 function padZero(number) {
   return number < 10 ? "0" + number : number;
 }
-
 
 document.addEventListener('keypress', function (event) {
   if (event.key === 'Enter') {
