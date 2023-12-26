@@ -26,20 +26,22 @@ body {
 
 .form {
   display: flex;
-  gap: 1rem;
+  gap: 5px;
   flex-wrap: wrap;
-  margin: 20px;
+  margin: 15px;
+  justify-content: space-between;
 }
 
 .label {
   display: flex;
   align-items: start;
+  justify-content: center;
   flex-direction: column;
-  gap: 8px;
   font-size: 20px;
   font-weight: 600;
   min-width: 200px; /* Set your desired min-width value */
   margin: 0 5px;
+  flex-grow: 1;
 }
 
 input[type="number"] {
@@ -146,9 +148,6 @@ input[type="number"]:focus {
 }
 
 @media (max-width: 600px) {
-  .label {
-    width: 100%;
-  }
   .time {
     font-size: 80px;
   }
