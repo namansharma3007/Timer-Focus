@@ -21,6 +21,9 @@ function setTimer() {
   let minutes = parseInt(minutesInput.value, 10) || 0;
   let seconds = parseInt(secondsInput.value, 10) || 0;
 
+
+  setZero();
+  
   intervalId = setInterval(function () {
     seconds--;
 
@@ -42,7 +45,6 @@ function setTimer() {
       }
     }
     updateDisplay(hours, minutes, seconds);
-    setZero();
   }, 1000);
 }
 
