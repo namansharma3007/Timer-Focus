@@ -23,7 +23,7 @@ function setTimer() {
 
 
   setZero();
-  
+
   intervalId = setInterval(function () {
     seconds--;
 
@@ -54,17 +54,17 @@ function displayAlert() {
 }
 function displayResume() {
   displayTime.innerHTML = `
-    <div class="time">
-      <div class="time" id="hours">00</div>
-      <span>:</span>
-    </div>
-    <div class="time">
-      <div class="time" id="minutes">00</div>
-      <span>:</span>
-    </div>
-    <div class="time">
-      <div class="time" id="seconds">00</div>
-    </div>
+  <div class="time">
+    <span id="hours">00</span>
+    <span>:</span>
+  </div>
+  <div class="time">
+    <span id="minutes">00</span>
+    <span>:</span>
+  </div>
+  <div class="time">
+    <span id="seconds">00</span>
+  </div>
   `;
 }
 
